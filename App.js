@@ -1,15 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+ 
+//// constructor test text
+//
+//  const App = (props) => {
+//  var myStyle = {
+//    backgroundColor: '#000',
+//    height: 10
+//  }
+//  return (<div style={myStyle}> <a href='#'
+//    notrendered='x'
+//    onClick={update}>
+//    {/* this is a comment */}
+//    this is the text
+//    {i>1 ? 'More than one' : 'one'}
+//    {i>1 && 'More than on'} </a>
+//    </div>)
+//  }
 
 class App extends React.Component {
 	constructor() {
 		super();
-		this.state = {
-			input: '/* add your jsx here */',
-			output: '',
-			err: ''
-		}
 		this.update = this.update.bind(this)
+		this.state = {
+			input: "",
+			output: this.update,
+			err: ""
+		}
 	}
 	update(e) {
 		let code = e.target.value;
